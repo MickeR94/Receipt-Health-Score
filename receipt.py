@@ -9,9 +9,6 @@ from transformers import pipeline
 classifier = pipeline("zero-shot-classification", model="KBLab/megatron-bert-large-swedish-cased-165-zero-shot") # Swedish words. potentially better classification. https://kb-labb.github.io/posts/2023-02-12-zero-shot-text-classification/
 # classifier = pipeline("zero-shot-classification", model="MoritzLaurer/mDeBERTa-v3-base-mnli-xnli") # way too slow in comparison to the previous two. After 30 min I cancel the run
 df = pd.read_csv('labels.csv')
-#print(df.to_string)
-#print(df.head())
-#print(df['label'].value_counts())
 
 item_purchased = df['name']
 #print(f"The items that are in the data frame: \n {item_purchased}")
